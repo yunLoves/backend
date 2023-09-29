@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd"> -->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "mybatis-3-mapper.dtd">
+
+<mapper namespace="mapper.CreatorRepository">
+
+    <select id="selectCreator" parameterType="Long" resultType="com.example.bbsproject.domain.entity.Creator">
+        SELECT * FROM creator WHERE creator_id = #{creatorId}
+    </select>
+
+    <!-- 컬럼 이름 추가 -->
+    <insert id="insertCreator" parameterType="com.example.bbsproject.domain.entity.Creator">
+        INSERT INTO creator () VALUES (#{bbsTitle}, #{bbsContents}, #{userName})
+    </insert>
+
+</mapper>
