@@ -1,0 +1,22 @@
+{{>layouts/header}}
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Title</th>
+        <th scope="col">Content</th>
+    </tr>
+    </thead>
+    <tbody>
+    {{#board}}   <!--뷰 단에서 엔티티객체를 넣기 위한 문법-->
+        <tr>
+            <th>{{id}}</th>
+            <td>{{title}}</td>
+            <td>{{content}}</td>
+        </tr>
+    {{/board}}
+    </tbody>
+</table>
+<a href="/board/{{board.id}}/edit" class="btn btn-primary">수정하기</a>
+<a href="/board">돌아가기</a>  <!--상세 페이지에서 목록으로 돌아가기-->
+{{>layouts/footer}}

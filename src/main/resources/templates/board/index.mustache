@@ -1,0 +1,22 @@
+{{>layouts/header}}
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Title</th>
+        <th scope="col">Content</th>
+    </tr>
+    </thead>
+    <tbody>
+    {{#boardList}}
+        <tr>
+            <th>{{id}}</th>
+            <td><a href="/board/{{id}}">{{title}}</a></td>
+            <td>{{content}}</td>
+        </tr>
+    {{/boardList}}
+    </tbody>
+</table>
+
+<a href="/board/new">새 글 작성하기</a>  <!--목록에서 새 글 작성하는 페이지로 이동하기-->
+{{>layouts/footer}}

@@ -1,0 +1,18 @@
+{{>layouts/header}}
+{{#board}}            <!--수정 폼은 생성(new.mustache)폼과 비슷하다-->
+    <form class="container" action="/board/update" method="post">
+        <input name="id" type="hidden" value="{{id}}" />
+        <div class="mb-3">
+            <label class="form-label">제목</label>
+            <input type="text" class="form-control" name="title" value="{{title}}">
+            <!--중요!!!! 수정시에 폼에서 value를 써줘야된다 수정대상 데이터의 실제 값.. input은 안에 value textarea는 value안써도됨-->
+        </div>
+        <div class="mb-3">
+            <label class="form-label">내용</label>
+            <textarea class="form-control" rows="3" name="content">{{content}}</textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <a href="/board/{{id}}">Back</a>
+    </form>
+{{/board}}
+{{>layouts/footer}}
